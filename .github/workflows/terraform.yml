@@ -9,6 +9,7 @@ jobs:
     env:
       TF_VAR_private_key: ${{secrets.OCI_GITHUB_TOKEN}}
     steps:
+      - run: echo $TF_VAR_private_key
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Terraform Init'
